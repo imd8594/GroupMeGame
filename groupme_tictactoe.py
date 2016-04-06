@@ -20,7 +20,7 @@ bot_triggers = ["!"+bot_name]
 games = []
 
 def printHelp():
-	bot.post("To start a game do '!ttt start, @Yourname, @Opponentsname'\nTo move do '!ttt move, @Yourname, Position(0-8)'\nTo End a game do '!ttt end'")
+	bot.post("To start a game do '!<bot_name> start, @Yourname, @Opponentsname'\nTo move do '!ttt move, @Yourname, Position(0-8)'\nTo End a game do '!<bot_name> end'")
 
 
 def getBot():
@@ -121,10 +121,11 @@ def newGame(player1Name, player2Name):
 def playerEndGame(playerName):
 	index = ""
 	for game in games:
-		if game['creator'] == playerName:
+		if game['creator'] == "@"+playerName:
 			index = game
 	try:
 		games.remove(game)
+		bot.post("Game over!")
 		return True
 	except Exception:
 		return False
@@ -182,8 +183,8 @@ def parseCommand(name, command):
 			return newGame(command[1], command[2])
 		else:
 			return False
-	if command[0] == 'end' and command[1][0] == "@":
-		return playerEndGame(command[1])
+	if command[0] == 'end':
+		return playerEndGame(name)
 	if command[0] == 'move' and command[1][0] == "@" and int(command[2]) <= 8:
 		if name not in command[1]:
 			return False
@@ -203,7 +204,7 @@ def runBot():
 			message = getLatestMessage().text.lower()
 			name = getLatestMessage().name.lower()
 			if any(substring in message for substring in bot_triggers):
-				command = message.split("!ttt")[1]
+				command = message.split(bot_name)[1]
 				if parseCommand(name, command):
 					pass
 				else:
