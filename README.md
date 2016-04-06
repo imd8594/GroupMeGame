@@ -7,5 +7,5 @@ GroupMe Dev page: https://dev.groupme.com/
 How to use:
   Install GroupyAPI (Instructions at http://groupy.readthedocs.org/en/master/pages/installation.html)
   Create your bot at https://dev.groupme.com/bots
-  Insert groupid and botname into groupme_tictactoe.py
+  Insert groupid and bot_name into groupme_tictactoe.py
   Run
