@@ -9,3 +9,10 @@ How to use:
   Create your bot at https://dev.groupme.com/bots
   Insert groupid and bot_name into groupme_tictactoe.py
   Run
+
+How to Play:
+  start a game "!<bot_name> start, @User1, @User2
+  @User1 moves first
+  to move "!<bot_name> move, @User1, (Position of piece [0-8])
+  to manually end a game "!<bot_name> end" (Must be creator of game to end)
+
