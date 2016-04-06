@@ -11,8 +11,8 @@
 from groupy import Bot, Group
 
 #groupme constents
-groupid = "5598173"
-bot_name = "ttt"
+groupid = ""
+bot_name = ""
 
 bot = [bot for bot in Bot.list() if bot.name == bot_name][0]
 
