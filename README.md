@@ -15,4 +15,10 @@ How to Play:
   @User1 moves first
   to move "!<bot_name> move, @User1, (Position of piece [0-8])
   to manually end a game "!<bot_name> end" (Must be creator of game to end)
+  
+   0 | 1 | 2 
+  -----------
+   3 | 4 | 5
+  -----------
+   6 | 7 | 8
 
