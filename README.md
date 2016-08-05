@@ -1,4 +1,5 @@
 # GroupMeGame
+##This is mainly a proof of concept. For a better GroupMe bot look at https://github.com/imd8594/GroupMeReddit
 
 Groupme tic tac toe game made using only a bot.
 GroupyAPI docs here: http://groupy.readthedocs.org/en/master/
